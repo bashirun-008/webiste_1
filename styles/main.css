@@ -1,0 +1,492 @@
+/* ============================================
+   SPINES — a small library for AI-written novels
+   ============================================ */
+
+:root {
+  --bg: #14171f;
+  --bg-elevated: #1c202b;
+  --bg-elevated-2: #232838;
+  --ink: #ecE8dd;
+  --ink-muted: #9ca0af;
+  --ink-faint: #6b7080;
+  --accent: #c9a961;
+  --accent-ink: #14171f;
+  --accent-soft: rgba(201, 169, 97, 0.14);
+  --border: #2a2f3d;
+  --shelf: #0e1015;
+  --shadow: rgba(0, 0, 0, 0.45);
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Source Serif 4", Georgia, serif;
+  --font-ui: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f1ece0;
+  --bg-elevated: #fffdf8;
+  --bg-elevated-2: #f8f3e6;
+  --ink: #201d18;
+  --ink-muted: #6b6558;
+  --ink-faint: #938c7a;
+  --accent: #97742a;
+  --accent-ink: #fffdf8;
+  --accent-soft: rgba(151, 116, 42, 0.1);
+  --border: #ddd5c2;
+  --shelf: #e4dcc7;
+  --shadow: rgba(90, 78, 50, 0.18);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: var(--accent-soft); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0 10px;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.brand small {
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.topbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  cursor: pointer;
+  color: var(--ink);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.icon-btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+.icon-btn svg { width: 17px; height: 17px; }
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 36px 0 44px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 46px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+  margin: 0 0 14px;
+  max-width: 16ch;
+}
+
+.hero p {
+  color: var(--ink-muted);
+  font-size: 1.05rem;
+  max-width: 52ch;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- Bookshelf ---------- */
+
+.shelf-group { margin-bottom: 54px; }
+
+.shelf-label {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 18px;
+}
+
+.shelf {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 0 4px 22px;
+  overflow-x: auto;
+  position: relative;
+  scrollbar-width: thin;
+}
+
+.shelf::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 14px;
+  background: var(--shelf);
+  border-radius: 3px;
+  box-shadow: 0 8px 16px var(--shadow);
+}
+
+.spine {
+  --h: 268px;
+  position: relative;
+  width: 54px;
+  min-width: 54px;
+  height: var(--h);
+  border-radius: 4px 4px 2px 2px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.25), transparent 8%, transparent 92%, rgba(0,0,0,0.25)), var(--spine-color, var(--accent));
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 16px;
+  box-shadow: 2px 0 0 rgba(0,0,0,0.1) inset, 0 6px 10px var(--shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.spine:hover {
+  transform: translateY(-10px);
+  box-shadow: 2px 0 0 rgba(0,0,0,0.1) inset, 0 14px 22px var(--shadow);
+}
+
+.spine-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.86rem;
+  color: rgba(0,0,0,0.72);
+  letter-spacing: 0.01em;
+  max-height: calc(var(--h) - 34px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.spine-progress {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: var(--pct, 0%);
+  background: rgba(255,255,255,0.22);
+  border-radius: 4px 4px 0 0;
+}
+
+.spine-ribbon {
+  position: absolute;
+  top: -3px;
+  right: 9px;
+  width: 8px;
+  height: 22px;
+  background: var(--ink);
+  opacity: 0.85;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
+  display: none;
+}
+.spine.has-bookmark .spine-ribbon { display: block; }
+
+/* ---------- Book detail ---------- */
+
+.book-hero {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 44px;
+  padding: 30px 0 50px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+  .book-hero { grid-template-columns: 1fr; }
+}
+
+.book-cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 6px;
+  background: var(--spine-color, var(--accent));
+  box-shadow: 0 18px 30px var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  text-align: center;
+}
+
+.book-cover span {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: rgba(0,0,0,0.75);
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.book-genre {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.book-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  margin: 0 0 6px;
+}
+
+.book-author {
+  color: var(--ink-faint);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+
+.book-desc {
+  color: var(--ink-muted);
+  line-height: 1.7;
+  max-width: 58ch;
+  margin-bottom: 26px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: var(--accent-ink);
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); opacity: 0.92; }
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--ink);
+}
+
+.progress-bar-track {
+  width: 220px;
+  max-width: 100%;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--bg-elevated-2);
+  overflow: hidden;
+  margin-top: 18px;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  width: var(--pct, 0%);
+  transition: width 0.4s ease;
+}
+.progress-label {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  margin-top: 8px;
+}
+
+/* Chapter list */
+
+.chapter-list { list-style: none; margin: 0; padding: 0; }
+
+.chapter-list li {
+  border-bottom: 1px solid var(--border);
+}
+
+.chapter-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 4px;
+  font-family: var(--font-ui);
+  font-size: 0.98rem;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+}
+.chapter-link:hover { color: var(--accent); padding-left: 8px; }
+
+.chapter-num {
+  font-family: var(--font-display);
+  color: var(--ink-faint);
+  margin-right: 14px;
+  font-size: 0.85rem;
+}
+
+.chapter-status {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.chapter-status.done { color: var(--accent); }
+
+/* ---------- Reader ---------- */
+
+.reader-bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+
+.reader-bar-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.reader-bar-title {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reader-progress-track {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  width: 100%;
+  background: transparent;
+  z-index: 6;
+}
+.reader-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.1s linear;
+}
+
+.reader-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 56px 24px 120px;
+  font-size: var(--reader-size, 1.15rem);
+  line-height: 1.85;
+  font-family: var(--font-body);
+}
+
+.reader-content h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.7em;
+  line-height: 1.25;
+  margin-bottom: 0.9em;
+}
+
+.reader-content p { margin: 0 0 1.3em; }
+
+.reader-nav {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 24px 90px;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.font-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.font-controls button {
+  width: 30px; height: 30px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: var(--font-ui);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 90px 20px;
+  color: var(--ink-muted);
+  font-family: var(--font-ui);
+}
+.empty-state h2 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+footer.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 30px 0 60px;
+  color: var(--ink-faint);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  text-align: center;
+}

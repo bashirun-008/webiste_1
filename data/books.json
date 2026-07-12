@@ -1,0 +1,432 @@
+[
+  {
+    "slug": "ashes-of-tomorrow",
+    "title": "Ashes of Tomorrow",
+    "author": "Your Pen Name",
+    "genre": "Sci-Fi",
+    "description": "A dying satellite, a signal that shouldn't exist, and the last person willing to chase it. A sample novel included so you can see how the site works.",
+    "accent": "#C9A961",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "Chapter 1: Arrival",
+        "file": "01.md"
+      },
+      {
+        "id": "ch02",
+        "title": "Chapter 2: The Signal",
+        "file": "02.md"
+      },
+      {
+        "id": "ch03",
+        "title": "Chapter 3: What the Ash Remembers",
+        "file": "03.md"
+      }
+    ]
+  },
+  {
+    "slug": "the-underdogs-of-sector-12",
+    "title": "The Underdogs of Sector 12",
+    "author": "Your Pen Name",
+    "genre": "Sports Drama",
+    "description": "Eight neighborhood kids with no coach and no ground worth the name build a cricket team out of nothing but stubbornness \u2014 and find out what the game gives them beyond winning.",
+    "accent": "#B5654E",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "Chapter One: The Ground",
+        "file": "01.md"
+      },
+      {
+        "id": "ch02",
+        "title": "Chapter Two: The Coach Who Didn't Want the Job",
+        "file": "02.md"
+      },
+      {
+        "id": "ch03",
+        "title": "Chapter Three: What They Were Missing",
+        "file": "03.md"
+      },
+      {
+        "id": "ch04",
+        "title": "Chapter Four: The Tournament",
+        "file": "04.md"
+      },
+      {
+        "id": "ch05",
+        "title": "Chapter Five: What the Team Gave Each Kid",
+        "file": "05.md"
+      },
+      {
+        "id": "ch06",
+        "title": "Chapter Six: The Final",
+        "file": "06.md"
+      },
+      {
+        "id": "ch07",
+        "title": "Chapter Seven: What Endures",
+        "file": "07.md"
+      }
+    ]
+  },
+  {
+    "slug": "the-last-bench",
+    "title": "The Last Bench",
+    "author": "Your Pen Name",
+    "genre": "Coming of Age",
+    "description": "Two boys share the last bench of Row C for nine years and build a friendship neither of them knows yet they'll spend the rest of their lives measuring everything against.",
+    "accent": "#6B85A3",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "Chapter One: Two Boys, One Bench",
+        "file": "01.md"
+      },
+      {
+        "id": "ch02",
+        "title": "Chapter Two: The Shape of a Whole Childhood",
+        "file": "02.md"
+      },
+      {
+        "id": "ch03",
+        "title": "Chapter Three: The Last Year",
+        "file": "03.md"
+      },
+      {
+        "id": "ch04",
+        "title": "Chapter Four: The Slow Fade",
+        "file": "04.md"
+      },
+      {
+        "id": "ch05",
+        "title": "Chapter Five: The Letter Neither Sent",
+        "file": "05.md"
+      },
+      {
+        "id": "ch06",
+        "title": "Chapter Six: The Reunion",
+        "file": "06.md"
+      },
+      {
+        "id": "ch07",
+        "title": "Chapter Seven: What Gets Rebuilt",
+        "file": "07.md"
+      }
+    ]
+  },
+  {
+    "slug": "three-rooms-in-koramangala",
+    "title": "Three Rooms in Koramangala",
+    "author": "Your Pen Name",
+    "genre": "Literary Fiction",
+    "description": "Three women who became flatmates by accident become family on purpose \u2014 and find out what that really costs when one of them gets sick.",
+    "accent": "#8E9B7A",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "Chapter One: The Flat",
+        "file": "01.md"
+      },
+      {
+        "id": "ch02",
+        "title": "Chapter Two: The Diagnosis",
+        "file": "02.md"
+      },
+      {
+        "id": "ch03",
+        "title": "Chapter Three: What the Illness Revealed",
+        "file": "03.md"
+      },
+      {
+        "id": "ch04",
+        "title": "Chapter Four: The Return",
+        "file": "04.md"
+      },
+      {
+        "id": "ch05",
+        "title": "Chapter Five: The Last Good Months",
+        "file": "05.md"
+      },
+      {
+        "id": "ch06",
+        "title": "Chapter Six: The Two Rooms",
+        "file": "06.md"
+      },
+      {
+        "id": "ch07",
+        "title": "Chapter Seven: What Grief Leaves Behind",
+        "file": "07.md"
+      }
+    ]
+  },
+  {
+    "slug": "crown-of-thorns",
+    "title": "Crown of Thorns",
+    "author": "Your Pen Name",
+    "genre": "Historical Fiction",
+    "description": "An empress is murdered in her own palace on a night of celebration. What survives her is a disgraced prince, a quiet act of loyalty, and a court that isn't finished with either of them.",
+    "accent": "#A9822F",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "Chapter One: The Fall of an Empress",
+        "file": "01.md"
+      },
+      {
+        "id": "ch02",
+        "title": "Chapter Two: The Second Life",
+        "file": "02.md"
+      },
+      {
+        "id": "ch03",
+        "title": "Chapter Three: The Disgraced Prince",
+        "file": "03.md"
+      },
+      {
+        "id": "ch04",
+        "title": "Chapter Four: The Slow Climb",
+        "file": "04.md"
+      },
+      {
+        "id": "ch05",
+        "title": "Chapter Five: The Emperor's Favor",
+        "file": "05.md"
+      },
+      {
+        "id": "ch06",
+        "title": "Chapter Six: What Loyalty Costs",
+        "file": "06.md"
+      },
+      {
+        "id": "ch07",
+        "title": "Chapter Seven: The Night That Doesn't Happen",
+        "file": "07.md"
+      },
+      {
+        "id": "ch08",
+        "title": "Chapter Eight: What Survives",
+        "file": "08.md"
+      }
+    ]
+  },
+  {
+    "slug": "the-whatsapp-group-called-chaos",
+    "title": "The WhatsApp Group Called Chaos",
+    "author": "Your Pen Name",
+    "genre": "Contemporary Fiction",
+    "description": "Four college best friends, eight years and one group chat apart, reunite for a wedding in Goa \u2014 and find out how much they've been quietly not telling each other.",
+    "accent": "#C9A961",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "Chapter One: The Group That Never Dies",
+        "file": "01.md"
+      },
+      {
+        "id": "ch02",
+        "title": "Chapter Two: Who They'd Become",
+        "file": "02.md"
+      },
+      {
+        "id": "ch03",
+        "title": "Chapter Three: The First Night, and the Cracks",
+        "file": "03.md"
+      },
+      {
+        "id": "ch04",
+        "title": "Chapter Four: What Nobody Said",
+        "file": "04.md"
+      },
+      {
+        "id": "ch05",
+        "title": "Chapter Five: The Wedding",
+        "file": "05.md"
+      },
+      {
+        "id": "ch06",
+        "title": "Chapter Six: What Survives the Distance",
+        "file": "06.md"
+      }
+    ]
+  },
+  {
+    "slug": "the-last-coalition",
+    "title": "The Last Coalition",
+    "author": "Your Pen Name",
+    "genre": "Political Drama",
+    "description": "A veteran chief minister has one skill that's kept him in power for eleven years: counting men. When defection threatens his government overnight, he has one weekend to prove he still knows how to count better than anyone trying to unseat him.",
+    "accent": "#6B85A3",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "The Last Coalition",
+        "file": "01.md"
+      }
+    ]
+  },
+  {
+    "slug": "the-ledger",
+    "title": "The Ledger",
+    "author": "Your Pen Name",
+    "genre": "Journalism Thriller",
+    "description": "A local reporter receives forty photocopied pages that don't match the official record \u2014 and learns that publishing the truth is only the first, and easiest, cost of finding it.",
+    "accent": "#A9822F",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "The Ledger",
+        "file": "01.md"
+      }
+    ]
+  },
+  {
+    "slug": "two-sons-of-nandgaon",
+    "title": "Two Sons of Nandgaon",
+    "author": "Your Pen Name",
+    "genre": "Political Drama",
+    "description": "When a dynasty's patriarch is felled by a stroke, his two sons inherit not a seat, but a rivalry \u2014 one built patiently over five years, and paid for in loyalty neither of them ever stopped collecting.",
+    "accent": "#B5654E",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "Two Sons of Nandgaon",
+        "file": "01.md"
+      }
+    ]
+  },
+  {
+    "slug": "the-hill-behind-the-mine",
+    "title": "The Hill Behind the Mine",
+    "author": "Your Pen Name",
+    "genre": "Political Drama",
+    "description": "A schoolteacher's son takes on a mining conglomerate and the MLA in its pocket, armed with nothing but eleven months of walking meetings and an arrears ledger nobody in power ever expected the village to see.",
+    "accent": "#8E9B7A",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "The Hill Behind the Mine",
+        "file": "01.md"
+      }
+    ]
+  },
+  {
+    "slug": "the-sweepers-daughter",
+    "title": "The Sweeper's Daughter",
+    "author": "Your Pen Name",
+    "genre": "Political Drama",
+    "description": "The daughter of a municipal sweeper takes on a family that's held her constituency for four decades \u2014 with a bicycle, a notebook of complaints, and a refusal to stop naming names.",
+    "accent": "#C9A961",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "The Sweeper's Daughter",
+        "file": "01.md"
+      }
+    ]
+  },
+  {
+    "slug": "the-last-single-screen",
+    "title": "The Last Single Screen",
+    "author": "Your Pen Name",
+    "genre": "Literary Fiction",
+    "description": "A single-screen cinema in Old Delhi is losing to multiplexes and real estate developers \u2014 and its owner has one final show left to convince his son it was never just a building.",
+    "accent": "#6B85A3",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "Chapter 1: The Smell of Popcorn and Oil",
+        "file": "01.md"
+      },
+      {
+        "id": "ch02",
+        "title": "Chapter 2: The Real Estate Shadow",
+        "file": "02.md"
+      },
+      {
+        "id": "ch03",
+        "title": "Chapter 3: The Projector Room",
+        "file": "03.md"
+      },
+      {
+        "id": "ch04",
+        "title": "Chapter 4: The Final Screening",
+        "file": "04.md"
+      },
+      {
+        "id": "ch05",
+        "title": "Chapter 5: The Curtain Falls",
+        "file": "05.md"
+      }
+    ]
+  },
+  {
+    "slug": "notes-from-the-borderland",
+    "title": "Notes from the Borderland",
+    "author": "Your Pen Name",
+    "genre": "Coming of Age",
+    "description": "A teenager in the Naga hills chases a K-pop audition while her grandmother tries to pass down a language of indigo dye and handloom weaving \u2014 until she finds the two aren't as far apart as they seem.",
+    "accent": "#8E9B7A",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "Chapter 1: K-Pop and Kitchen Smoke",
+        "file": "01.md"
+      },
+      {
+        "id": "ch02",
+        "title": "Chapter 2: The Indigo Dye",
+        "file": "02.md"
+      },
+      {
+        "id": "ch03",
+        "title": "Chapter 3: The Highway Cafe",
+        "file": "03.md"
+      },
+      {
+        "id": "ch04",
+        "title": "Chapter 4: The Sound of the Loom",
+        "file": "04.md"
+      },
+      {
+        "id": "ch05",
+        "title": "Chapter 5: The Audition Tape",
+        "file": "05.md"
+      }
+    ]
+  },
+  {
+    "slug": "filter-coffee-conversations",
+    "title": "Filter Coffee Conversations",
+    "author": "Your Pen Name",
+    "genre": "Contemporary Romance",
+    "description": "A matrimonial app match built on filter coffee and honesty is tested by family expectations and a career-defining promotion that could send one of them across the country.",
+    "accent": "#A9822F",
+    "chapters": [
+      {
+        "id": "ch01",
+        "title": "Chapter 1: The Profile Match",
+        "file": "01.md"
+      },
+      {
+        "id": "ch02",
+        "title": "Chapter 2: The Caf\u00e9 Protocol",
+        "file": "02.md"
+      },
+      {
+        "id": "ch03",
+        "title": "Chapter 3: The Family Dinner",
+        "file": "03.md"
+      },
+      {
+        "id": "ch04",
+        "title": "Chapter 4: The Career Crossroad",
+        "file": "04.md"
+      },
+      {
+        "id": "ch05",
+        "title": "Chapter 5: Brewing the Future",
+        "file": "05.md"
+      }
+    ]
+  }
+]
