@@ -1,0 +1,135 @@
+/* ============================================
+   Spines — simple stylesheet
+   This is plain CSS. Every rule below just says
+   "for this kind of element, use these styles."
+   ============================================ */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #14171f;
+  color: #ecE8dd;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+/* The box that keeps content from stretching too wide on big screens */
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 30px 24px 80px;
+}
+
+/* Top navigation bar with site name and a home link */
+header {
+  border-bottom: 1px solid #2a2f3d;
+  padding: 20px 24px;
+}
+
+header a {
+  color: #c9a961;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #ecE8dd;
+  margin-bottom: 6px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #c9a961;
+  margin-top: 40px;
+}
+
+p {
+  margin: 0 0 1.2em;
+}
+
+a {
+  color: #c9a961;
+}
+
+/* The label above each book, like "Genre: Fantasy" */
+.meta {
+  color: #9ca0af;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* Book list on the home page: each book is a simple box */
+.book-card {
+  display: block;
+  border: 1px solid #2a2f3d;
+  border-left: 6px solid #c9a961; /* colored strip, changed per book with inline style */
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  text-decoration: none;
+  color: #ecE8dd;
+}
+
+.book-card:hover {
+  border-color: #c9a961;
+}
+
+.book-card h3 {
+  margin: 0 0 6px;
+  color: #ecE8dd;
+}
+
+.book-card p {
+  margin: 0;
+  color: #9ca0af;
+  font-size: 0.95rem;
+}
+
+/* Chapter list on each book's page */
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-list li {
+  border-bottom: 1px solid #2a2f3d;
+}
+
+.chapter-list a {
+  display: block;
+  padding: 14px 4px;
+  text-decoration: none;
+  color: #ecE8dd;
+}
+
+.chapter-list a:hover {
+  color: #c9a961;
+}
+
+/* Prev / Next buttons at the bottom of a chapter page */
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #2a2f3d;
+}
+
+.chapter-nav a {
+  text-decoration: none;
+  color: #14171f;
+  background-color: #c9a961;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+}

@@ -1,99 +1,34 @@
-# Spines
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter Six: What Survives the Distance</title>
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
 
-A small, self-contained website for hosting your 15 novels — bookshelf home page, per-book chapter lists, and a distraction-free reader with dark mode, adjustable text size, reading progress, and bookmarks. No backend, no build step, no database. Everything a reader does (progress, bookmarks, dark/light mode) is saved in their own browser via `localStorage`.
+<header>
+  <a href="../../index.html">Spines</a>
+</header>
 
-## 1. Try it locally
+<div class="page">
+<a class="back-link" href="index.html">&larr; The WhatsApp Group Called Chaos: all chapters</a>
+<h1>Chapter Six: What Survives the Distance</h1>
 
-Browsers block plain `file://` pages from loading `fetch()` data, so run a tiny local server from this folder:
+  <p>They left Goa on different flights, back to different cities and different lives that would, inevitably, pull at their attention in the specific, ordinary way adult life always does. But the monthly video call happened — awkwardly at first, four schedules colliding, Neha's daughter interrupting more than one call with demands for snacks, Sameer once joining from what was very obviously a job interview waiting room he hadn't mentioned yet — and it kept happening, month after month, imperfect but real.</p>
+  <p>Arjun saw the doctor, got signed off work for two weeks of mandatory rest that turned, eventually, into a genuine conversation with his manager about workload that he'd been too afraid to have for a year. Neha finished a freelance logo project for a friend's bakery, small and unglamorous, and felt something in her chest unlock that she hadn't expected a single logo commission to unlock. Sameer took a new job, and this time, three months in when the old panic started creeping in, he sent a message to the group at 1 a.m. that just said <em>feeling the urge to run again, someone talk me down,</em> and three people, in three different cities, dropped what they were doing to call him.</p>
+  <p>Priya, a year later, told the group — video call, no performance, voice shaking slightly — that the startup had nearly folded that quarter, a fact she hadn't told anyone, including her own family, and that saying it out loud to three people who wouldn't judge her for it had been the only reason she'd found the clarity to fix it instead of quietly drowning in silence the way she'd been doing for months.</p>
+  <p>They did not become the inseparable, daily-texting group they'd been at nineteen — that particular kind of closeness, they all understood by now, belonged to a specific season of life that adulthood simply didn't allow to repeat. But what replaced it was, in its own way, sturdier: four people who had learned, at the cost of one chaotic wedding trip and a night of too much sundowner rum, that the group chat called CHAOS was not just a relic of who they used to be, but proof of something that had never actually stopped being real underneath eight years of polite, exhausted silence.</p>
+  <p>"Same time next year?" Priya asked, at the end of the anniversary call marking exactly one year since Goa.</p>
+  <p>"Chaos doesn't have an off-season," Sameer said. "You know this."</p>
 
-```bash
-npx serve .
-# or
-python3 -m http.server 8000
-```
+<div class="chapter-nav">
+  <a href="chapter-05.html">&larr; Previous</a>
+  <a href="index.html">Back to book</a>
+</div>
 
-Then open the printed local address. You should see one shelf with a sample book, **Ashes of Tomorrow**, fully written with 3 chapters — read through it to see how the site behaves.
+</div>
 
-## 2. Add your 15 novels
-
-Each book has two parts:
-
-**A. An entry in `data/books.json`**
-
-```json
-{
-  "slug": "your-book-slug",
-  "title": "Your Book Title",
-  "author": "Your Pen Name",
-  "genre": "Sci-Fi",
-  "description": "One or two sentences that pull a reader in.",
-  "accent": "#C9A961",
-  "chapters": [
-    { "id": "ch01", "title": "Chapter 1: Arrival", "file": "01.md" },
-    { "id": "ch02", "title": "Chapter 2", "file": "02.md" }
-  ]
-}
-```
-
-`slug` must be unique and URL-safe (lowercase, hyphens). `accent` is any hex color — it's used as the spine and cover color.
-
-**B. A markdown file per chapter**
-
-Put chapter text in `books/<slug>/chapters/<file>.md`, matching the `file` name you used in `books.json`. Plain Markdown:
-
-```markdown
-# Chapter 1: Arrival
-
-Your first paragraph here.
-
-Another paragraph. *Italics* and **bold** both work.
-```
-
-The site already has this scaffolded for all 15 books — 14 of them currently contain a placeholder chapter explaining what to do. Just replace the placeholder text and add more `.md` files + chapter entries as needed for each book's real chapter count.
-
-### Fastest way to bulk-load 15 already-written novels
-
-If each novel is currently one big text file, split it into chapters and drop the files into `books/<slug>/chapters/`, named `01.md`, `02.md`, etc. Any script or editor's find/replace works — you're just chopping on chapter breaks and adding a `# Chapter Title` line at the top of each file. Ask me and I can write that splitter for you if you paste a book in.
-
-## 3. Customize
-
-- Colors, fonts, and layout: `styles/main.css` (CSS variables at the top control the whole palette — separate light/dark sets).
-- Site name and hero copy: `index.html`.
-- Shelf grouping size (default 5 books per shelf): `scripts/library.js`, the `shelfSize` constant.
-
-## 4. Deploy
-
-**Vercel**
-```bash
-npm i -g vercel
-vercel
-```
-No config needed — it's a static site, Vercel will detect it automatically.
-
-**GitHub Pages**
-1. Push this folder to a GitHub repo.
-2. Repo Settings → Pages → set source to the branch/root.
-3. Your site will be live at `https://<username>.github.io/<repo>/`.
-
-That's it — no environment variables, no server, no database.
-
-## How the data is structured
-
-```
-spines/
-├── index.html          # bookshelf home page
-├── book.html            # one book's description + chapter list
-├── reader.html           # the actual reading view
-├── data/
-│   └── books.json        # metadata for all 15 books
-├── books/
-│   └── <slug>/chapters/*.md   # chapter text, one file each
-├── styles/main.css
-└── scripts/
-    ├── app.js            # theme, progress, bookmarks, markdown renderer
-    ├── library.js
-    ├── book.js
-    └── reader.js
-```
-
-Reading progress is marked automatically once a reader scrolls ~85% through a chapter. Bookmarks save the exact scroll position, so "resume" drops the reader back where they left off.
+</body>
+</html>
